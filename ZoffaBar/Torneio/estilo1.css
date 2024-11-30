@@ -1,0 +1,343 @@
+@charset "utf-8";
+
+/* Reset básico para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(48, 0, 0); 
+    color: #FBFFFE; 
+}
+
+/* Estilo do logo */
+#logo {
+    position: absolute;
+    left: 25px;
+    top: -15px;
+    color: #FBFFFE;
+    margin-top: 30px;
+    margin-left: -25px;
+    list-style: none;
+    font-size: 25px; /* Ajuste no tamanho da fonte para o logo */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Barra de navegação */
+nav {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    background-color: #6B0504; /* Cor de fundo da barra */
+    z-index: 100;
+}
+
+nav > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav > ul > li {
+    display: inline-block;
+    padding: 15px 25px;
+}
+
+nav > ul > li > a {
+    color: #FBFFFE;
+    text-decoration: none;
+    transition: background .7s, transform 0.3s ease;
+    font-size: 20px;
+}
+
+nav > ul > li a:hover {
+    color: #FBFFFE;
+    background-color: #6B0504;
+    border-radius: 15px;
+    padding: 11px;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.desconectar {
+    right: 50px;
+    position: absolute;
+
+}
+
+/* Estilo da seção principal */
+main {
+    text-align: center;
+    margin: 30px auto;
+}
+
+main > #intro {
+    padding: 15px;
+    padding-bottom: 20px;
+}
+
+main > #intro > h1 {
+    color: #FBFFFE;
+    font-size: 55px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Box de conteúdo principal */
+#caoegato {
+    display: flex; /* Alinha as caixas lado a lado */
+    justify-content: center; /* Centraliza as caixas dentro da div */
+    margin: 25px auto;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.46);
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 95%;
+}
+
+#pai {
+    display: block; /* Alinha as caixas lado a lado */
+    justify-content: center; /* Centraliza as caixas dentro da div */
+    margin: 25px auto;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.46);
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 95%;
+}
+
+
+#box1, #box2 {
+    display: block; /* Garante que cada caixa seja independente */
+    width: 45%; /* Define a largura de cada caixa para ocupar metade da div */
+    height: 300px; /* Altura definida para as caixas */
+    background-size: cover; /* Faz a imagem cobrir toda a área da caixa */
+    background-position: center; /* Centraliza a imagem dentro da caixa */
+    margin: 10px; /* Espaço entre as caixas */
+    border-radius: 10px;
+    box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.46);
+}
+
+/* Estilos específicos para cada caixa */
+#box1 {
+    background-image: url(imagen/Zfotobalcao.jpeg);
+}
+
+#box2 {
+    background-image: url(imagen/Zfotojorge.jpeg);
+}
+
+#texto {
+    background-color: #6B0504;
+    margin: 15px auto;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.46);
+    position: relative;
+    padding: 50px;
+    font-size: 15px;
+    border-radius: 15px;
+    max-width: 95%;
+    color: #FBFFFE;
+    line-height: 1.6;
+}
+
+#texto h1 {
+    color: #FBFFFE;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Box de imagens */
+#box3 {
+    background-image: url(imagen/1.png);
+    background-size: cover;
+}
+
+#box4 {
+    background-image: url(imagen/2.png);
+    background-size: cover;
+}
+
+#box5 {
+    background-image: url(imagen/2.png);
+    background-size: cover;
+}
+
+/* Box Style */
+#box1, #box2 {
+    display: inline-block;
+    border-radius: 15px;
+    height: 360px;
+    width: 700px;
+    box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.46);
+    margin: 10px;
+}
+
+#box3, #box4, #box5 {
+    display: inline-block;
+    border-radius: 15px;
+    height: 500px;
+    width: 1000px;
+    box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.46);
+    margin: 10px;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav > ul > li {
+        display: block;
+        padding: 10px;
+    }
+
+    #caoegato, #texto, #pai {
+        padding: 10px;
+    }
+
+    #box1, #box2, #box3, #box4, #box5 {
+        width: 90%;
+        height: 300px;
+        margin: 15px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #imglogo {
+        position: static;
+        margin: auto;
+        display: block;
+    }
+
+    nav > ul > li {
+        font-size: 18px;
+    }
+
+    main > #intro > h1 {
+        font-size: 55px;
+    }
+
+    #caoegato, #pai {
+        padding: 10px;
+    }
+}
+
+/* Estilo do footer */
+footer {
+    background-color: #6B0504;
+    padding: 15px 0;
+    text-align: center;
+    color: #FBFFFE;
+    font-size: 16px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Adicionando sombra e efeitos para destacar o conteúdo importante */
+#texto:hover {
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+}
+
+.input-box{
+    position: relative;
+    width: 50% ;
+    height: 50px;
+    margin: 30px 0; 
+    right: 2%;
+ }
+ 
+ .input-box input{
+     width: 90%;
+     height: 100%;
+     background: transparent;
+     border: none;
+     outline: none;
+     border: 2px solid rgb(255, 255, 255, .2);
+     border-radius: 40px;
+     font-size: 16px;
+     color: #fff;
+     padding: 20px 45px 20px 20px;
+ 
+ 
+ }
+ 
+ .input-box input::placeholder{
+     color: #fff;
+ }
+ 
+ .input-box i{
+     position: absolute;
+     right: 50px;
+     top: 50%;
+     transform: translateY(-50%);
+     font-size: 20px;
+ }
+
+#cadastroconfirmar_id {
+    width: 40%;
+    height: 50px; /* Definindo uma altura fixa para o select */
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px; /* Definindo o tamanho da fonte */
+    color: #fff;
+    padding: 5px 15.5px ; /* Ajuste o padding para dar mais espaço */
+    position: absolute;
+    bottom: 49%;  /* Movendo um pouco para cima */
+    right: 6%; 
+    line-height: 1.5; /* Ajuste o line-height para dar mais espaço para o texto */
+    text-align: left; /* Garante que o texto do select esteja centralizado */
+
+}
+
+.confirme {
+    width: 40%;
+    height: 8%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 10px;
+    color: #ff0000;
+    padding: 30px 5px 20px 0px;
+    position: absolute;
+    bottom: 77%;  
+    right: 5%;
+     
+
+}
+
+#cadastroconfirmar_id option {
+    color: #000000; 
+}
+
+#cadastroconfirmar_id option[selected] {
+    color: white;
+    outline: none;
+}
+
+.btn {
+    width: 20%;
+    height: 45px;
+    background: #200000;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #9b0501;
+}

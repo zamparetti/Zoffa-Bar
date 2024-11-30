@@ -1,0 +1,297 @@
+@charset "utf-8";
+
+/* Reset básico para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(48, 0, 0); /* Cor de fundo mais sóbria e elegante */
+    color: #FBFFFE; /* Cor clara para o texto, garantindo boa legibilidade */
+}
+
+/* Estilo do logo */
+#logo {
+    position: absolute;
+    left: 25px;
+    top: -15px;
+    color: #FBFFFE;
+    margin-top: 45px;
+    margin-right: 200px;
+    list-style: none;
+    font-size: 25px; /* Ajuste no tamanho da fonte para o logo */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Barra de navegação */
+nav {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    background-color: #6B0504; /* Cor de fundo da barra */
+    z-index: 100;
+}
+
+nav > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav > ul > li {
+    display: inline-block;
+    padding: 15px 25px;
+}
+
+nav > ul > li > a {
+    color: #FBFFFE;
+    text-decoration: none;
+    transition: background .7s, transform 0.3s ease;
+    font-size: 20px;
+}
+
+nav > ul > li a:hover {
+    color: #FBFFFE;
+    background-color: #6B0504;
+    border-radius: 15px;
+    padding: 11px;
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.desconectar {
+    right: 50px;
+    position: absolute;
+
+}
+
+/* Estilo da seção principal */
+main {
+    text-align: center;
+    margin: 30px auto;
+}
+
+main > #intro {
+    padding: 45px;
+}
+
+main > #intro > h1 {
+    color: #FBFFFE;
+    font-size: 85px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Box de conteúdo principal */
+#caoegato {
+    display: flex; /* Alinha as caixas lado a lado */
+    justify-content: center; /* Centraliza as caixas dentro da div */
+    margin: 25px auto;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.46);
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 95%;
+}
+
+#pai {
+    display: block; /* Alinha as caixas lado a lado */
+    justify-content: center; /* Centraliza as caixas dentro da div */
+    margin: 25px auto;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.46);
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 95%;
+}
+
+
+#box1, #box2 {
+    display: block; /* Garante que cada caixa seja independente */
+    width: 45%; /* Define a largura de cada caixa para ocupar metade da div */
+    height: 300px; /* Altura definida para as caixas */
+    background-size: cover; /* Faz a imagem cobrir toda a área da caixa */
+    background-position: center; /* Centraliza a imagem dentro da caixa */
+    margin: 10px; /* Espaço entre as caixas */
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px rgba(175, 70, 70, 0.46);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#box1:hover {
+    transform: scale(1.05);
+   
+}
+
+#box2:hover {
+    transform: scale(1.05);
+   
+}
+
+/* Estilos específicos para cada caixa */
+#box1 {
+    background-image: url(imagen/Zfotobalcao.jpeg);
+}
+
+#box2 {
+    background-image: url(imagen/Zfotojorge.jpeg);
+}
+
+/* Texto explicativo */
+#texto {
+    background-color: #6B0504;
+    margin: 15px auto;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.46);
+    padding: 50px;
+    font-size: 15px;
+    border-radius: 100px;
+    max-width: 95%;
+    color: #FBFFFE;
+    line-height: 1.6;
+    text-align: left;
+}
+
+#texto h1 {
+    color: #FBFFFE;
+    padding: 20px;
+    border-radius: 60px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.46);
+}
+
+/* Box de imagens */
+#box3 {
+    background-size: cover;
+}
+
+#box3 img {
+    height: 500px;
+    width: 380px;
+    border-radius: 45px;
+    zoom: 110%;
+    box-shadow: 0px 0px 30px rgba(175, 70, 70, 0.46);
+
+}
+
+#box4 {
+    background-size: cover;
+}
+
+#box4 img {
+    height: 500px;
+    width: 320px;
+    border-radius: 45px;
+    box-shadow: 0px 0px 30px rgba(175, 70, 70, 0.46);
+    zoom: 110%;
+
+}
+
+#box5 {
+    background-size: cover;
+}
+
+#box5 img {
+    height: 500px;
+    width: 380px;
+    border-radius: 45px;
+    box-shadow: 0px 0px 30px rgba(175, 70, 70, 0.46);
+    zoom: 110%;
+
+}
+
+#box3:hover {
+    transform: scale(1.05);
+   
+}
+
+#box5:hover {
+    transform: scale(1.05);
+   
+}
+
+#box4:hover {
+    transform: scale(1.05);
+   
+}
+
+/* Box Style */
+#box1, #box2 {
+    display: inline-block;
+    border-radius: 15px;
+    height: 360px;
+    width: 700px;
+    box-shadow: 0px 0px 30px rgba(175, 70, 70, 0.46);
+    margin: 10px;
+}
+
+#box3, #box4, #box5 {
+    display: inline-block;
+    border-radius: 45px;
+    height: 500px;
+    width: 490px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 35px;
+}
+
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav > ul > li {
+        display: block;
+        padding: 10px;
+    }
+
+    #caoegato, #texto, #pai {
+        padding: 10px;
+    }
+
+    #box1, #box2, #box3, #box4, #box5 {
+        width: 90%;
+        height: 300px;
+        margin: 15px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #imglogo {
+        position: static;
+        margin: auto;
+        display: block;
+    }
+
+    nav > ul > li {
+        font-size: 18px;
+    }
+
+    main > #intro > h1 {
+        font-size: 55px;
+    }
+
+    #caoegato, #pai {
+        padding: 10px;
+    }
+}
+
+/* Estilo do footer */
+footer {
+    background-color: #6B0504;
+    padding: 15px 0;
+    text-align: center;
+    color: #FBFFFE;
+    font-size: 16px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Adicionando sombra e efeitos para destacar o conteúdo importante */
+#caoegato:hover, #pai:hover, #texto:hover {
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+}
